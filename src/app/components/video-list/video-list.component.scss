@@ -8,4 +8,7 @@
   flex-flow: row wrap;
   gap: 15px;
 }
-.videos-list {}
+.videos-list {
+  display: flex;
+  flex-direction: column;
+}
