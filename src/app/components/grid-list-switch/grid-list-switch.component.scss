@@ -1,0 +1,14 @@
+.grid-list-switch-container {
+  width: 100%;
+  display: flex;
+  place-content: flex-end;
+
+  img {
+    &:hover {
+      cursor: pointer;
+    }
+    &.enabled {
+      background-color: #cccccc;
+    }
+  }
+}

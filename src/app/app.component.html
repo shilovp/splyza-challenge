@@ -1,1 +1,11 @@
-<router-outlet></router-outlet>
+<header>
+  <img src="../assets/splyza_logo.png" alt="splyza logo" height="50" />
+  <div class="logged-user">
+    <img [src]="user?.pictureUrl" height="32" alt="avatar" />
+    <p>{{user?.name}}</p>
+  </div>
+</header>
+<main>
+  <app-grid-list-switch [isGrid]="isGrid" (isGridUpdate)="onIsGridUpdate($event)"></app-grid-list-switch>
+  <router-outlet></router-outlet>
+</main>

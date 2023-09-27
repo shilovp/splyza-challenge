@@ -1,0 +1,6 @@
+<div class="grid-list-switch-container">
+  <div class="grid-list-switch-buttons">
+    <img src="../../../assets/grid-icon.svg" alt="grid" height="44" [ngClass]="{'enabled': isGrid}" (click)="onIsGridUpdate(true)">
+    <img src="../../../assets/list-icon.svg" alt="grid" height="44" [ngClass]="{'enabled': !isGrid}" (click)="onIsGridUpdate(false)">
+  </div>
+</div>

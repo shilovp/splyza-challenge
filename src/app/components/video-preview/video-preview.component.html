@@ -1,0 +1,18 @@
+<div class="video-preview-item-container"
+  [ngClass]="{'grid-preview': _gridListService.getIsGrid(), 'list-preview': !_gridListService.getIsGrid()}">
+  <div class="video-preview-image">
+    <img [src]="video?.previewUrl" [alt]="video?.title">
+  </div>
+  <div class="video-preview-title">
+    <p>{{video?.title}}</p>
+  </div>
+  <div class="video-preview-date-user">
+    <div>
+      <p>{{video?.createdDate | date:'shortDate'}}</p>
+    </div>
+    <div class="user">
+      <img [src]="video?.author?.pictureUrl" [alt]="video?.author?.name">
+      <p>{{video?.author?.name}}</p>
+    </div>
+  </div>
+</div>

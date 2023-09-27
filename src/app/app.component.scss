@@ -1,0 +1,17 @@
+.logged-user {
+  display: flex;
+  place-items: center;
+  color: white;
+  line-height: 24px;
+  font-size: 16px;
+
+  img {
+    border: 1px #cccccc solid;
+    margin-right: 10px;
+  }
+}
+
+main {
+  padding-top: 32px;
+  padding-inline: 120px;
+}

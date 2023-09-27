@@ -1,0 +1,51 @@
+.video-preview-item-container {
+  &:hover {
+    background-color: #efefef;
+    cursor: pointer;
+  }
+}
+.grid-preview {
+  display: flex;
+  flex-direction: column;
+  height: 291px;
+
+  .video-preview-image {
+    img {
+      width: 384px;
+      height: 216px;
+    }
+  }
+
+  .video-preview-title {
+    height: 26px;
+    line-height: 26px;
+    font-size: 18px;
+    color: #171717;
+    padding-inline: 12px;
+    padding-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  .video-preview-date-user {
+    display: flex;
+    height: 24px;
+    line-height: 22px;
+    font-size: 14px;
+    color: #8d8d8d;
+    place-content: space-between;
+    place-items: center;
+    width: 360px;
+    padding-inline: 12px;
+    gap: 8px;
+
+    img {
+      height: 24px;
+      width: 24px;
+    }
+    .user {
+      display: flex;
+      place-items: center;
+      gap: 5px;
+    }
+  }
+}
