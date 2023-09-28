@@ -96,7 +96,7 @@ Backend error log:
 TypeError: Cannot read properties of undefined (reading 'split') // and error building the resource
 ```
 
->The frontend part for sending snapshot reaction is prepared and should work properly right after backend is fixed.
+>The frontend part for sending snapshot reaction is prepared and should work properly right after backend is fixed. Fow now only Star reaction works properly.
 
 ### Rimraf missing package is described in setup step.
 
