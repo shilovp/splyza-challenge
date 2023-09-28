@@ -1,1 +1,38 @@
-<p>video-details works!</p>
+<div class="video-details-container">
+  <div class="video-details-input-section" *ngIf="currentUser?.id === video?.author?.id">
+    <input type="text" [value]="video?.title" (keyup)="updateTitle($event)" />
+    <button (click)="saveVideoTitle()" [disabled]="!updatedTitle">Save</button>
+  </div>
+  <h3 *ngIf="currentUser?.id !== video?.author?.id">{{video?.title}}</h3>
+  <video [src]="video?.url" controls id="videoPlayer">
+  </video>
+  <div class="reactions-container">
+    <button class="reaction-button" (click)="sendReaction('snapshot')">
+      <img src="../../../assets/snapshot-icon.svg" alt="snapshot">
+      <p>Snapshot</p>
+    </button>
+    <button class="reaction-button" (click)="sendReaction('star')">
+      <img src="../../../assets/star-icon.svg" alt="star">
+      <p>Star</p>
+    </button>
+    <div class="user">
+      <img [src]="video?.author?.pictureUrl" [alt]="video?.author?.name" width="24" height="24">
+      <p>{{video?.author?.name}}</p>
+    </div>
+  </div>
+  <p class="reactions-title">Reactions</p>
+  <div class="reactions-list">
+    <div *ngFor="let reaction of reactions" class="reaction-row" (click)="gotToTimeframe(reaction.timeframe)">
+      <div class="reaction-column">
+        <img [src]="'../../../assets/' + resolveReactionType(reaction.type)" alt="reaction" width="19" height="19">
+        <h4>{{resolveTimeframe(reaction.timeframe)}}</h4>
+      </div>
+      <div class="reaction-column fade">
+        <p>{{reaction.author.name}} {{reaction.type === 'star' ? 'starred the video': 'creeated a snapshot'}}   ({{reaction.postedDate | date: 'shortDate'}})</p>
+      </div>
+      <div class="reaction-column preview">
+        <img [src]="video?.previewUrl" alt="preview" width="96" height="54">
+      </div>
+    </div>
+  </div>
+</div>

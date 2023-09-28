@@ -6,4 +6,5 @@ export interface Video {
   createdDate: string;
   author: User;
   previewUrl: string;
+  url: string;
 }

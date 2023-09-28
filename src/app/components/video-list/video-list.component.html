@@ -1,5 +1,6 @@
-<div class="videos-container" [ngClass]="{'videos-grid': _gridListService.getIsGrid(), 'videos-list': !_gridListService.getIsGrid()}">
+<div class="videos-container"
+  [ngClass]="{'videos-grid': _gridListService.getIsGrid(), 'videos-list': !_gridListService.getIsGrid()}">
   <div *ngFor="let video of videos">
-    <app-video-preview [video]="video"></app-video-preview>
+    <app-video-preview [video]="video" (click)="openVideo(video.id)"></app-video-preview>
   </div>
 </div>
