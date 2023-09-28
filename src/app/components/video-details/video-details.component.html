@@ -4,7 +4,7 @@
     <button (click)="saveVideoTitle()" [disabled]="!updatedTitle">Save</button>
   </div>
   <h3 *ngIf="currentUser?.id !== video?.author?.id">{{video?.title}}</h3>
-  <video [src]="video?.url" controls id="videoPlayer">
+  <video [src]="video?.url" controls id="videoPlayer" style="position: relative;">
   </video>
   <div class="reactions-container">
     <button class="reaction-button" (click)="sendReaction('snapshot')">
@@ -28,7 +28,8 @@
         <h4>{{resolveTimeframe(reaction.timeframe)}}</h4>
       </div>
       <div class="reaction-column fade">
-        <p>{{reaction.author.name}} {{reaction.type === 'star' ? 'starred the video': 'creeated a snapshot'}}   ({{reaction.postedDate | date: 'shortDate'}})</p>
+        <p>{{reaction.author.name}} {{reaction.type === 'star' ? 'starred the video': 'creeated a snapshot'}}
+          ({{reaction.postedDate | date: 'shortDate'}})</p>
       </div>
       <div class="reaction-column preview">
         <img [src]="video?.previewUrl" alt="preview" width="96" height="54">

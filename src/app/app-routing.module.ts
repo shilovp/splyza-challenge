@@ -5,7 +5,7 @@ import { VideoDetailsComponent } from './components/video-details/video-details.
 
 const routes: Routes = [
   {
-    path: '', redirectTo:'videos', pathMatch:'full'
+    path: '', redirectTo: 'videos', pathMatch: 'full'
   },
   {
     path: 'videos', component: VideoListComponent, title: 'Videos',

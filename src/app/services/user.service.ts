@@ -11,6 +11,6 @@ export class UserService {
   constructor(private _http: HttpClient) { }
 
   getCurrentUser(): Observable<User> {
-    return this._http.get<User>(BACKEND_URL + '/users/self', {headers: {"Access-Control-Allow-Origin": "*"}});
+    return this._http.get<User>(BACKEND_URL + '/users/self', { headers: { "Access-Control-Allow-Origin": "*" } });
   }
 }
