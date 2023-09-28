@@ -11,5 +11,11 @@ export class VideoPreviewComponent {
   @Input()
   video: Video | null = null;
 
-  constructor(public _gridListService: GridListService) {}
+  constructor(public _gridListService: GridListService) { }
+
+  truncateVideoTitle(title: string | undefined): string {
+    if (!title) { return ''; }
+    const lenghtLimit = this._gridListService.getIsGrid() ? 50 : 110;
+    return title.length > lenghtLimit ? title.slice(0, lenghtLimit) + '...' : title;
+  }
 }

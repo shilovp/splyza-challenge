@@ -4,7 +4,7 @@
     <img [src]="video?.previewUrl" [alt]="video?.title">
   </div>
   <div class="video-preview-title">
-    <p>{{video?.title}}</p>
+    <p>{{ truncateVideoTitle(video?.title)}}</p>
   </div>
   <div class="video-preview-date-user">
     <div>
