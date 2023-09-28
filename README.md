@@ -12,7 +12,7 @@ First of all let's prepare the backend application:
 
 1. `git clone https://github.com/splyza/video-box-server.git`
 2. Install dependencies `npm i`
-* * Please, note, that backend application missing one dependency in it's `package.json`, it's **rimraf**. Let's install it in the next step. * *
+Please, note, that backend application missing one dependency in it's `package.json`, it's **rimraf**. Let's install it in the next step.
 3. `npm i rimraf`
 4. Run server: `npm start`. By default backend will be started on `localhost:3000`
 
