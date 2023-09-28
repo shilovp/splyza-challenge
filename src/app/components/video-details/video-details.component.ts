@@ -33,7 +33,6 @@ export class VideoDetailsComponent implements OnInit {
   getVideo(videoId: string | null) {
     this._videoService.getVideo(videoId).subscribe((response) => {
       this.video = response;
-      console.log(this.video);
     });
   }
 
@@ -63,7 +62,6 @@ export class VideoDetailsComponent implements OnInit {
         video: this.video
       };
       this._videoService.sendReaction(reaction).subscribe((response) => {
-        console.log('reaction sent: ', response);
         this.getReactions(this.video?.id || null);
       });
     }

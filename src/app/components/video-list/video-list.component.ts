@@ -19,7 +19,6 @@ export class VideoListComponent implements OnInit {
   ngOnInit(): void {
     this._videoService.getVideoList().subscribe((response) => {
       this.videos = response;
-      console.log('videos list: ', this.videos);
     });
   }
 
