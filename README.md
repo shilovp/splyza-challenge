@@ -9,7 +9,8 @@ Design file can be found by the following link: [FIGMA](https://www.figma.com/fi
 ## Setup
 
 First of all let's prepare the backend application:
-Please, note, that backend application missing one dependency in it's `package.json`, it's **rimraf**. Let's install it in the next steps as well.
+
+>Please, note, that backend application missing one dependency in it's `package.json`, it's **rimraf**. Let's install it in the next steps as well.
 
 1. `git clone https://github.com/splyza/video-box-server.git`
 2. Install dependencies `npm i`
@@ -89,7 +90,13 @@ Investigating the problem I found out there is something wrong with mapping in `
     }
 ```
 
-The frontend part for sending snapshot reaction is prepared and should work properly right after backend is fixed.
+Backend error log: 
+```
+{ videoId: 'aaaaa2', type:"snapshot', timeframe: 5.568 } // message received from frontend
+TypeError: Cannot read properties of undefined (reading 'split') // and error building the resource
+```
+
+>The frontend part for sending snapshot reaction is prepared and should work properly right after backend is fixed.
 
 ### Rimraf missing package is described in setup step.
 
